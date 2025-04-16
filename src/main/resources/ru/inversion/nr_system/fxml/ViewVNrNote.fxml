@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.VBox?>
+<?import ru.inversion.fx.form.controls.JInvTable?>
+<?import ru.inversion.fx.form.controls.JInvTableColumn?>
+<?import ru.inversion.fx.form.controls.JInvToolBar?>
+
+<VBox prefHeight="400.0" prefWidth="800.0" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.inversion.nr_system.ViewVNrNoteController">
+<children>
+<JInvToolBar fx:id="toolBar" VBox.vgrow="ALWAYS" />
+      <TabPane fx:id="tabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="387.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab fx:id="idTabNote" text="Заметки">
+               <content>
+                    <JInvTable fx:id="V_NR_NOTE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="259.0" prefWidth="800.0" tableMenuButtonVisible="true">
+                        <columns>
+                            <JInvTableColumn fx:id="INOTE_ID" editable="false" fieldName="INOTE_ID" showInFilter="false" sortType="DESCENDING" sortable="false" text="Идентификатор заметки" visible="false" />
+                            <JInvTableColumn fx:id="CHEADING" fieldName="CHEADING" maxWidth="1.7976931348623157E308" minWidth="-1.0" text="Название" />
+                            <JInvTableColumn fx:id="CTEXT" fieldName="CTEXT" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="687.0" text="Описание" />
+                        </columns>
+                    </JInvTable>
+               </content>
+          </Tab>
+          <Tab fx:id="idTabRem" text="Напоминания">
+               <content>
+                  <JInvTable fx:id="V_NR_REMINDER" tableMenuButtonVisible="true">
+                     <columns>
+                        <JInvTableColumn fx:id="IREM" editable="false" fieldName="IREM" prefWidth="75.0" showInFilter="false" sortType="DESCENDING" sortable="false" text="Идентификатор напоминания" visible="false" />
+                        <JInvTableColumn fx:id="CHEADING" editable="false" fieldName="CHEADING" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Название" />
+                        <JInvTableColumn fx:id="CTEXT" editable="false" fieldName="CTEXT" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="404.0" text="Содержание" />
+                        <JInvTableColumn fx:id="DDATEREMINDER" editable="false" fieldName="DDATEREMINDER" maxWidth="1.7976931348623157E308" minWidth="-1.0" orderInF7FilterGroup="0" prefWidth="94.0" text="Дата" />
+                        <JInvTableColumn fx:id="CCONDITION" editable="false" fieldName="CCONDITION" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="171.0" text="Условие" />
+                     </columns>
+                  </JInvTable>
+               </content>
+          </Tab>
+        </tabs>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </padding>
+      </TabPane>
+</children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" />
+   </padding>
+</VBox>

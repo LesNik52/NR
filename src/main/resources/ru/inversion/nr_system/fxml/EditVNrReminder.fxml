@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import ru.inversion.fx.form.controls.JInvButton?>
+<?import ru.inversion.fx.form.controls.JInvCalendar?>
+<?import ru.inversion.fx.form.controls.JInvComboBox?>
+<?import ru.inversion.fx.form.controls.JInvLabel?>
+<?import ru.inversion.fx.form.controls.JInvLongField?>
+<?import ru.inversion.fx.form.controls.JInvTextField?>
+
+<VBox prefHeight="231.0" prefWidth="756.0" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.inversion.nr_system.EditVNrReminderController">
+<children>
+<GridPane hgap="5.0" vgap="5.0" VBox.vgrow="ALWAYS">
+<children>
+<JInvLabel fx:id="lblIREM" text="Идентификатор напоминания" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+<JInvLongField fx:id="IREM" editable="false" fieldName="IREM" maxWidth="-Infinity" prefColumnCount="0" prefHeight="25.0" prefWidth="86.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+<JInvLabel fx:id="lblCHEADING" text="Название" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+<JInvTextField fx:id="CHEADING" fieldName="CHEADING" maxWidth="-Infinity" prefColumnCount="20" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+<JInvLabel fx:id="lblCTEXT" text="Содержание" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+<JInvTextField fx:id="CTEXT" fieldName="CTEXT" prefColumnCount="50" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+<JInvLabel fx:id="lblDDATEREMINDER" text="Дата напоминания" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <JInvCalendar fx:id="DDATEREMINDER" fieldName="DDATEREMINDER" hideFeatures="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JInvTextField fx:id="CCONDITION" fieldName="CCONDITION" layoutX="181.0" layoutY="70.0" prefColumnCount="50" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JInvComboBox fx:id="CB" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onHiding="#HidingCB" prefHeight="24.0" prefWidth="184.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin></JInvComboBox>
+            <JInvLabel text="В момент напоминания" GridPane.rowIndex="4" />
+    
+</children>
+<columnConstraints>
+<ColumnConstraints halignment="RIGHT" />
+<ColumnConstraints hgrow="ALWAYS" />
+</columnConstraints>
+<VBox.margin>
+<Insets />
+</VBox.margin>
+<rowConstraints>
+<RowConstraints />
+<RowConstraints />
+<RowConstraints />
+<RowConstraints />
+<RowConstraints minHeight="1.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+</rowConstraints>
+</GridPane>
+<ButtonBar buttonMinWidth="80.0">
+<buttons>
+<JInvButton fx:id="btOK" />
+<JInvButton fx:id="btCancel" />
+</buttons>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </padding>
+</ButtonBar>
+</children>
+<padding>
+<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+</padding>
+</VBox>
