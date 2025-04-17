@@ -23,7 +23,7 @@ public class App extends BaseApp
     @Override
     public void showMainWindow() 
     {        
-        showVViewNrNote (getPrimaryViewContext (), null, Collections.emptyMap ());  
+        showVViewMain (getPrimaryViewContext (), null, Collections.emptyMap ());  
     }
 
     @Override
@@ -47,9 +47,9 @@ public class App extends BaseApp
 
     }
     @StartMethod (description = "Не поленитесь указать описание для showViewNrNoteView, JInvDesktop будет премного благодарен") 
-    public static void showVViewNrNote ( ViewContext vc, TaskContext tc, Map<String, Object> map ) 
+    public static void showVViewMain ( ViewContext vc, TaskContext tc, Map<String, Object> map ) 
     {
-        new FXFormLauncher<> (tc, vc, ViewVNrNoteController.class)
+        new FXFormLauncher<> (tc, vc, ViewMainController.class)
             .initProperties (map)
             .show ();
     }

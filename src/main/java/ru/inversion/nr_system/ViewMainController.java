@@ -25,7 +25,7 @@ import ru.inversion.bicomp.fxreport.ApReport;
  * @author  Lesin
  * @since   Sun Apr 13 13:46:42 MSK 2025
  */
-public class ViewVNrNoteController extends JInvFXBrowserController 
+public class ViewMainController extends JInvFXBrowserController 
 {
     @FXML private JInvTable<PVNrNote> V_NR_NOTE;   
     @FXML private JInvTable<PVNrReminder> V_NR_REMINDER;
